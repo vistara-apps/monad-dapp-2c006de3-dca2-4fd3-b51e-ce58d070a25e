@@ -14,11 +14,11 @@ interface Achievement {
 }
 
 const achievements: Achievement[] = [
-  { id: 'first-mint', title: 'First Steps', description: 'Mint your first tokens', requirement: 10, icon: '🎯' },
-  { id: 'collector', title: 'Collector', description: 'Mint 100 tokens', requirement: 100, icon: '💎' },
-  { id: 'enthusiast', title: 'Enthusiast', description: 'Mint 500 tokens', requirement: 500, icon: '🔥' },
-  { id: 'master', title: 'Master Minter', description: 'Mint 1000 tokens', requirement: 1000, icon: '👑' },
-  { id: 'legend', title: 'Legend', description: 'Mint 5000 tokens', requirement: 5000, icon: '⭐' },
+  { id: 'first-mint', title: 'First Steps', description: 'Mint your first tokens', requirement: 10, icon: '\ud83c\udfaf' },
+  { id: 'collector', title: 'Collector', description: 'Mint 100 tokens', requirement: 100, icon: '\ud83d\udc8e' },
+  { id: 'enthusiast', title: 'Enthusiast', description: 'Mint 500 tokens', requirement: 500, icon: '\ud83d\udd25' },
+  { id: 'master', title: 'Master Minter', description: 'Mint 1000 tokens', requirement: 1000, icon: '\ud83d\udc51' },
+  { id: 'legend', title: 'Legend', description: 'Mint 5000 tokens', requirement: 5000, icon: '\u2b50' },
 ];
 
 export function Achievements() {
