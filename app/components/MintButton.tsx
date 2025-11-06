@@ -59,6 +59,10 @@ export function MintButton() {
     });
   };
 
+  const handleReset = () => {
+    setCountdown(0);
+  };
+
   if (!address) {
     return (
       <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
@@ -130,6 +134,13 @@ export function MintButton() {
             Mint 10 MQT
           </>
         )}
+      </button>
+
+      <button
+        onClick={handleReset}
+        className="mt-4 w-full py-4 px-6 rounded-lg font-semibold text-lg bg-red-500 text-white hover:bg-red-600 transition-colors"
+      >
+        Reset Counter
       </button>
 
       {countdown > 0 && (
