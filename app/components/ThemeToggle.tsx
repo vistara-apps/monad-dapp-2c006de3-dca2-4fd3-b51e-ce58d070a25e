@@ -2,9 +2,22 @@
 
 import { useTheme } from '../context/ThemeContext';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react';
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent rendering until mounted to avoid hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 w-[42px] h-[42px]" />
+    );
+  }
 
   return (
     <button
